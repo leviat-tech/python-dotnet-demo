@@ -18,9 +18,15 @@ namespace MathNamespace
             return a - b;
         }
 
-        public double Factorial(double n)
+        public ulong Factorial(int n)
         {
-            return System.Math.Pow(n, 3.0);
+            int i; 
+            ulong factorial = 1;
+
+            for (i = 1; i <= n; i++){
+                factorial = factorial * (ulong) i;
+            }      
+           return factorial;
         }
     }
 }
