@@ -1,0 +1,59 @@
+{
+    "connectors": [
+        {
+            "valid": [
+                {
+                    "reference": "HIT SP 1...",
+                    "ultimate_loads": {
+                        "m": {
+                            "max": 0,
+                            "min": -3000
+                        },
+                        "v": {
+                            "max": 3200,
+                            "min": 0
+                        }
+                    },
+                    "ultimate_loads_limits": {
+                        "m": {
+                            "max": 0,
+                            "min": -5000
+                        },
+                        "v": {
+                            "max": 8000,
+                            "min": 0
+                        }
+                    },
+                    "load_factor": 0.72
+                },
+                {
+                    "reference": "HIT SP 2...",
+                    "ultimate_loads": {
+                        "m": {
+                            "max": 0,
+                            "min": -3000
+                        },
+                        "v": {
+                            "max": 3200,
+                            "min": 0
+                        }
+                    },
+                    "ultimate_loads_limits": {
+                        "m": {
+                            "max": 0,
+                            "min": -5000
+                        },
+                        "v": {
+                            "max": 8000,
+                            "min": 0
+                        }
+                    },
+                    "load_factor": 0.72
+                }
+            ], 
+            "optimal_reference": "HIT SP 1...",
+            "position": 0,
+            "length": 1
+        }
+    ]
+}

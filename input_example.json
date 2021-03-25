@@ -1,0 +1,26 @@
+{
+    "selector": {
+        "type": ["MVX", "ZVX"],
+        "height": 0.160,
+        "thickness": 0.080,
+        "length": [1.0, 0.5],
+        "concrete_cover": 0.035
+    },
+    "length": 2.2,
+    "concrete_class_structure": "C25/30",
+    "concrete_class_bqlcony": "C25/30",
+    "positioning_algorithm": "fill",
+    "optimization_objective": "price",
+    "supplier_connectors": "Halfen",
+    "ultimate_loads": {
+        "coords": [0, 0.1, "..."],
+        "m": {
+            "max": [1000, 998, "..."],
+            "min": [0, 0, "..."]
+        },
+        "v": {
+            "max": [1000, 998, "..."],
+            "min": [0, 0, "..."]
+        }
+    }
+}
