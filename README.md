@@ -44,7 +44,7 @@ echo "deb https://download.mono-project.com/repo/ubuntu stable-focal main" | sud
 
 ```bash
 sudo apt update
-sudo apt install clang libglib2.0-dev python3-dev mono-devel
+sudo apt install clang libglib2.0-dev python3-dev python3-venv python3-pip mono-devel
 ```
 
 ### Setting up Python virtualenv
