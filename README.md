@@ -17,12 +17,6 @@ To create a Linux-like environment in Windows, you can follow steps in
 
 Alternatively, you can install the Linux in a virtual machine on Windows.
 
-## Install
-
-This repository is intended to be built in Ubuntu 20.04 LTS. Different distributions/version might
-differ slightly in the installation of Mono dependancies. Consult 
-(https://www.mono-project.com/download/stable/#download-lin) for details.
-
 ### Getting this repository
 
 Use GIT to clone this repository and enter the directory.
@@ -32,19 +26,27 @@ git clone https://github.com/leviat-tech/python-dotnet-demo
 cd python-dotnet-demo
 ```
 
-### Add Dotnet dependencies
+### Add and install .NET dependencies
+
+The below installation is specific for Ubuntu 20.04, taken from 
+(https://docs.microsoft.com/en-au/dotnet/core/install/linux-ubuntu#2004-). 
+Consult detailed instructions for other each major supported distributions at
+(https://docs.microsoft.com/en-au/dotnet/core/install/linux).
 
 ```bash
-sudo apt install gnupg ca-certificates
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-echo "deb https://download.mono-project.com/repo/ubuntu stable-focal main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+sudo apt update
+sudo apt install apt-transport-https
+sudo apt update
+sudo apt install dotnet-sdk-5.0
 ```
 
 ### Install libraries and prerequesites
 
 ```bash
 sudo apt update
-sudo apt install clang libglib2.0-dev python3-dev python3-venv python3-pip mono-devel
+sudo apt install build-essentials python3-dev python3-venv python3-pip
 ```
 
 ### Setting up Python virtualenv
@@ -56,10 +58,10 @@ pip install wheel
 pip install -r requirements.txt
 ```
 
-## Building C# dll
+## Building C# project dll
 
 ```bash
-csc Math.cs -t:library
+dotnet publish MathDemoSrc --configuration Release  --self-contained
 ```
 
 ## Running server
