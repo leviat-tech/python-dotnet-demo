@@ -2,7 +2,7 @@ import math
 
 from flask import Flask, request, url_for
 
-from dotnet_importer import dot_net_math
+from dotnet_importer import Add
 
 app = Flask(__name__)
 
@@ -22,7 +22,7 @@ def factorial_dot_net():
 
     if "n" in request.args:
         n = int(request.args["n"])
-        return f"{n}-th factorial is {int(dot_net_math.Factorial(n))}"
+        return f"{n}-th factorial is {int(Add(n, 1000).Run())}"
 
     return default_html(request.base_url, request.args)
 
