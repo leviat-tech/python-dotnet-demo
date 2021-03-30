@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MathDemo.Core;
+
+using System;
 
 namespace MathDemo
 {
@@ -6,14 +8,20 @@ namespace MathDemo
     {
         public int Add(int a, int b)
         {
-            var add = new Add(a, b);
-            return add.Run();
+            var add = Factory.CreateAdd();
+            add.a = a;
+            add.b = b;
+            add.Run();
+            return add.Result;
         }
 
         public int Subtract(int a, int b)
         {
-            var subtract = new Subtract(a, b);
-            return subtract.Run();
+            var subtract = Factory.CreateSubtract();
+            subtract.a = a;
+            subtract.b = b;
+            subtract.Run();
+            return subtract.Result;
         }
 
         public ulong Factorial(int n)
