@@ -1,8 +1,8 @@
 
 import sys
-sys.path.append("./MathDemoSrc/bin/Release/netcoreapp3.1/publish/")
+sys.path.append("./MathDemoSrc/MathDemo/bin/Release/net5.0/publish/")
 
 import clr
 clr.AddReference("MathDemo")
 
-from MathDemo import Add, Subtract, Math
+from MathDemo import Math
