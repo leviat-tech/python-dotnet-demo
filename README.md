@@ -61,7 +61,7 @@ pip install -r requirements.txt
 ## Building C# project dll
 
 ```bash
-dotnet publish MathDemoSrc --configuration Release  --self-contained
+dotnet publish MathDemoSrc/MathDemo --configuration Release --self-contained
 ```
 
 ## Running server
