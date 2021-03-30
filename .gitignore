@@ -71,4 +71,6 @@ ipython_config.py
 
 # dotnet builds
 */bin
+*/*/bin
 */obj
+*/*/obj
