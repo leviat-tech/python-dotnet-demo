@@ -69,3 +69,9 @@ dotnet publish MathDemoSrc/MathDemo --configuration Release --self-contained
 ```bash
 ./run.sh
 ```
+
+## Running tests
+
+```bash
+dotnet test  MathDemoSrc/MathDemo.Test/MathDemo.Test.csproj
+```
