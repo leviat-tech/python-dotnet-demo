@@ -1,10 +1,8 @@
 
 import sys
-sys.path.append("./")
+sys.path.append("./MathDemoSrc/MathDemo/bin/Release/net5.0/publish/")
 
 import clr
-clr.AddReference("Math")
+clr.AddReference("MathDemo")
 
-from MathNamespace import Math
-
-dot_net_math = Math()
+from MathDemo import Math
