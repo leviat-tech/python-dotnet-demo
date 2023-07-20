@@ -18,7 +18,7 @@ pickleshare==0.7.5
 prompt-toolkit==3.0.18
 ptyprocess==0.7.0
 pycparser==2.20
-Pygments==2.8.1
+Pygments==2.15.0
 pythonnet==2.5.2
 regex==2021.3.17
 toml==0.10.2
